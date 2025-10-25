@@ -82,7 +82,9 @@ export const uploadUserImageService = async (req, res) => {
 };
 
 
-
+export const log = async (req,res)=>{
+  res.status(200).json({ message: "User logged in successfully" });
+}
 
 
 

@@ -21,5 +21,6 @@ userRouter.post(
     }).single("profile"),
     userServices.uploadUserImageService
 );
+userRouter.post("/log", userServices.log);
 // --- END MODIFIED ---
 export {userRouter};
