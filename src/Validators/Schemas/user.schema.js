@@ -13,13 +13,13 @@ export const signUpSchema= {
         gender: Joi.string().valid(...Object.values(GenderEnum)).required(),
         email: generalRules.email,
         password: generalRules.password,
-        // confirmPassword:Joi.valid(Joi.ref('password')).required(),
+        confirmPassword:Joi.valid(Joi.ref('password')).required(),
         phoneNumber: Joi.string().required(),
-        // isConfirmed: Joi.boolean().truthy('yes').falsy('no'),
-        // skills: Joi.array().items(Joi.object({
-        //     name: Joi.string().valid(...Names).required(),
-        //     level: Joi.string().valid(...Object.values(SkillLevelEnum)).required()
-        // })).length(2).required(),
-        // userId: generalRules.userId,
+        isConfirmed: Joi.boolean().truthy('yes').falsy('no'),
+        skills: Joi.array().items(Joi.object({
+            name: Joi.string().valid(...Names).required(),
+            level: Joi.string().valid(...Object.values(SkillLevelEnum)).required()
+        })).length(2).required(),
+        userId: generalRules.userId,
     })
 }

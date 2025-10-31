@@ -31,9 +31,9 @@ var corsOptions = {
 
 
 
-// app.use(cors(corsOptions));
-// app.use(helmet());
-// app.use(limiter);
+app.use(cors(corsOptions));
+app.use(helmet());
+app.use(limiter);
 app.use("/api/users", controller.userRouter,controller.authRouter);
 app.use("/api/messages",controller.messageRouter)
 await dbConnection();
